@@ -9,7 +9,8 @@
     "lib": [
       "dom",
       "es7"
-    ]
+    ],
+    "sourceMap": true
   },
   "include": [
     "src/app/**/*"

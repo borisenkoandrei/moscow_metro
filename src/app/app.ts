@@ -64,12 +64,12 @@ const throttle = (fn: (...args: any[]) => void, wait: number) => {
 };
 
 const preventTextSelection = () => {
-    if (window.getSelection && window.getSelection().empty) {
-        return window.getSelection().empty();
+    if (window.getSelection && window.getSelection()!.empty) {
+        return window.getSelection()!.empty();
     }
 
-    if (window.getSelection && window.getSelection().removeAllRanges) {
-        return window.getSelection().removeAllRanges();
+    if (window.getSelection && window.getSelection()!.removeAllRanges) {
+        return window.getSelection()!.removeAllRanges();
     }
 
     if (document.selection) { document.selection.empty(); }
